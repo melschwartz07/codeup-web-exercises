@@ -6,11 +6,36 @@
 </head>
 <body>
 <script>
+    /**
+     * TODO:
+     * Create a function called 'sayHello' that takes a parameter 'name'.
+     * When called, the function should return a message that says hello to the passed in name.
+     *
+     * Example
+     * > sayHello("codeup") // returns "Hello, codeup!"
+     */
+   // function sayHello() {
+    //   console.log("Hello, Melanie!");
+    //}
+    //sayHello();
+
+    /**
+     * TODO:
+     * Call the function 'sayHello' and pass your name as a string literal argument.
+     * Store the result of the function call in a variable named 'helloMessage'.
+     *
+     * console.log 'helloMessage' to check your work
+     */
 
     function sayHello() {
-       console.log("Hello, Melanie!");
+        return "Hello, ";
     }
-    sayHello();
+    function greeting(helloMessage, name) {
+        console.log(helloMessage() + name);
+    }
+    // Pass `sayHello` as an argument to `greeting` function
+    greeting(sayHello, "Melanie!");
+
 
 </script>
 <script

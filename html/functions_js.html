@@ -14,10 +14,12 @@
      * Example
      * > sayHello("codeup") // returns "Hello, codeup!"
      */
-   function sayHello() {
-    console.log("Hello, Melanie!");
+   function sayHello(name) {                //define function named sayHello with parameter (name)
+    console.log("Hello, " + name + "!");    //display string "Hello" that takes your parameter
     }
-    sayHello();
+    sayHello("Melanie");                    //call your function with your name passed
+
+    //console on chrome will display "Hello, Melanie!"
 
     /**
      * TODO:
@@ -27,14 +29,24 @@
      * console.log 'helloMessage' to check your work
      */
 
-    function sayHello() {
-        return "Hello, ";
-    }
-    function greeting(helloMessage, name) {
-        console.log(helloMessage() + name);
-    }
-    // Pass `sayHello` as an argument to `greeting` function
-    greeting(sayHello, "Melanie!");
+    //function sayHello() {
+    //    return "Hello, ";
+    //}
+    //function greeting(helloMessage, name) {
+    //    console.log(helloMessage() + name);
+    //}
+    ///greeting(sayHello, "Melanie!");
+
+    /**
+     * TODO:
+     * Store your name as a string in a variable named 'myName', and pass that
+     * variable to the 'sayHello' function. You should see the same output in the
+     * console.
+     */
+    //var myName = "Melanie";
+    //function stateName(myName){
+
+    //}
 
 
 </script>

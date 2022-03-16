@@ -31,21 +31,57 @@
         //create a function named analyzeColor
         //using if/else, relate the user's input to a response based on the color they entered.
         // for the colors not listed in the code block, return a statement saying you are not familiar
-        var chooseColor = prompt("Enter a color");
+        //  var chooseColor = prompt("Enter a color");
+        //
+        //  function analyzeColor() {
+        //      var result;
+        //      if (chooseColor === "Red") {
+        //          result = "Strawberry fields forever - symbolizes the immense potential each and every one of us has," +
+        //              " which is ever-present, but of which we are not always aware.";
+        //      } else if (chooseColor === "Blue") {
+        //          result = "Blues clues, Blues clues!";
+        //      } else {
+        //          result = "I'm not too familiar with that color.";
+        //      }
+        //      return result;
+        //  }
+        //      alert(analyzeColor(chooseColor));
 
-        function analyzeColor() {
-            var result;
-            if (chooseColor === "Red") {
-                result = "Strawberry fields forever - symbolizes the immense potential each and every one of us has," +
-                    " which is ever-present, but of which we are not always aware.";
-            } else if (chooseColor === "Blue") {
-                result = "Blues clues, Blues clues!";
-            } else {
-                result = "I'm not too familiar with that color.";
-            }
-            return result;
+    // Don't change the next two lines!
+    // These lines create two variables for you:
+    // - `colors`: a list of the colors of the rainbow
+    // - `randomColor`: contains a single random color value from the list (this
+    //                  will contain a different color every time the page loads)
+    /**
+     * TODO:
+     * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
+     * You should see a different message every time you refresh the page
+     */
+    var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+    var randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+    function analyzeColor(color){
+        console.log(color);
+        var result;
+        if(color === "red") {
+            result = "red is my favorite color";
+        } else if (color === "orange") {
+            result = "orange you glad it's almost Thursday?";
+        } else if (color === "yellow") {
+            result = "yellow? can anyone hear me?";
+        } else if (color === "green") {
+            result = "green machine";
+        } else if (color === "blue") {
+            result = "blue is a cool color";
+        } else if (color === "indigo") {
+            result = "whoa, indigo is the color of your energy";
+        } else {
+            result = "violets are blue";
         }
-            alert(analyzeColor(chooseColor));
+        return result;
+    }
+alert(analyzeColor(randomColor));
+
 
 </script>
 

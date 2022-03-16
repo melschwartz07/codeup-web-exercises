@@ -7,21 +7,45 @@
 <body>
 
 <script>
-    // TODO: write a conditional that prints "hey, she's my instructor" to the
-    //  console if the name provided is "Laura", but if the name provided
-    //  is "Kenneth", print out "oh, he's my instructor too!", if the name
-    //  is neither Laura nor Kenneth, print out "um I don't know them"
-    var whoIs = prompt("Who is your instructor?");
+    /**
+     * TODO:
+     * Create a function named `analyzeColor` that accepts a string that is a color
+     * name as input. This function should return a message which relates to the
+     * color stated in the argument of the function. For colors you do not have
+     * responses written for, return a string stating so
+     *
+     * Example:
+     *  > analyzeColor('blue') // returns "blue is the color of the sky"
+     *  > analyzeColor('red') // returns "Strawberries are red"
+     *
+     *
+     *  > analyzeColor('cyan') // returns "I don't know anything about cyan"
+     *
+     * You should use an if-else-if-else block to return different messages.
+     *
+     * Test your function by passing various string literals to it and
+     * console.logging the function's return value
+     */
 
+    //Create a global variable prompting the user to enter a color.
+        //create a function named analyzeColor
+        //using if/else, relate the user's input to a response based on the color they entered.
+        // for the colors not listed in the code block, return a statement saying you are not familiar
+        var chooseColor = prompt("Enter a color");
 
-    if(whoIs === "Laura"){
-        console.log("Hey, she's my instructor!");
-    } else if(whoIs === "Kenneth") {
-        console.log("oh, he's my instructor too!")
-    } else {
-        console.log("hmm I don't know them")
-    }
-
+        function analyzeColor() {
+            var result;
+            if (chooseColor === "Red") {
+                result = "Strawberry fields forever - symbolizes the immense potential each and every one of us has," +
+                    " which is ever-present, but of which we are not always aware.";
+            } else if (chooseColor === "Blue") {
+                result = "Blues clues, Blues clues!";
+            } else {
+                result = "I'm not too familiar with that color.";
+            }
+            return result;
+        }
+            alert(analyzeColor(chooseColor));
 
 </script>
 

@@ -52,35 +52,68 @@
     // - `colors`: a list of the colors of the rainbow
     // - `randomColor`: contains a single random color value from the list (this
     //                  will contain a different color every time the page loads)
+//     /**
+//      * TODO:
+//      * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
+//      * You should see a different message every time you refresh the page
+//      */
+//     var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+//     var randomColor = colors[Math.floor(Math.random() * colors.length)];
+//
+//     function analyzeColor(color){
+//         console.log(color);
+//         var result;
+//         if(color === "red") {
+//             result = "red is my favorite color";
+//         } else if (color === "orange") {
+//             result = "orange you glad it's almost Thursday?";
+//         } else if (color === "yellow") {
+//             result = "yellow? can anyone hear me?";
+//         } else if (color === "green") {
+//             result = "green machine";
+//         } else if (color === "blue") {
+//             result = "blue is a cool color";
+//         } else if (color === "indigo") {
+//             result = "whoa, indigo is the color of your energy";
+//         } else {
+//             result = "violets are blue";
+//         }
+//         return result;
+//     }
+// alert(analyzeColor(randomColor));
+
     /**
      * TODO:
-     * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
-     * You should see a different message every time you refresh the page
+     * Comment out the code above, and refactor your function to use a switch-case statement
      */
     var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
     var randomColor = colors[Math.floor(Math.random() * colors.length)];
-
-    function analyzeColor(color){
-        console.log(color);
-        var result;
-        if(color === "red") {
-            result = "red is my favorite color";
-        } else if (color === "orange") {
-            result = "orange you glad it's almost Thursday?";
-        } else if (color === "yellow") {
-            result = "yellow? can anyone hear me?";
-        } else if (color === "green") {
-            result = "green machine";
-        } else if (color === "blue") {
-            result = "blue is a cool color";
-        } else if (color === "indigo") {
-            result = "whoa, indigo is the color of your energy";
-        } else {
-            result = "violets are blue";
+    console.log(colors);
+        switch(randomColor) {
+            case "red":
+                alert("Red is my favorite color!");
+                break;
+            case "orange":
+                alert("Orange you glad it's almost Thursday?");
+                break;
+            case "yellow":
+                alert("yellow? Can anyone hear me?");
+                break;
+            case "green":
+                alert("green machine!");
+                break;
+            case "blue":
+                alert("blue is a cool color");
+                break;
+            case "indigo":
+                alert("whoa, indigo is the color of your energy");
+                break;
+            default:
+                alert("violets are blue");
+                break;
         }
-        return result;
-    }
-alert(analyzeColor(randomColor));
+    alert(randomColor);
+
 
 
 </script>

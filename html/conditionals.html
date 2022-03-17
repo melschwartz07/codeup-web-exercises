@@ -151,64 +151,66 @@
      * return value.
      */
 
+    // var luckyNumber = Math.floor(Math.random() * 6);
+    // var price = prompt("Enter the price of your items ");
+    //
+    //     function calculateTotal(luckyNumber, totalAmt){
+    //     var myResult = luckyNumber;
+    //
+    //         if (luckyNumber === 0){
+    //             return("Sorry! You did not choose a lucky number. Your total is $" + 1 * totalAmt);
+    //         } else if (luckyNumber === 1){
+    //             return ("Woohoo! You chose lucky number 1. Your total after discount is $" + 0.90 * totalAmt);
+    //         } else if (luckyNumber === 2){
+    //             return ("Woohoo! You chose lucky number 2. Your total after discount is $" + 0.75 * totalAmt);
+    //         } else if (luckyNumber === 3){
+    //             return ("Woohoo! You chose lucky number 3. Your total after discount is $" + 0.65 * totalAmt);
+    //         } else if (luckyNumber === 4){
+    //             return ("Woohoo! You chose lucky number 4. Your total after discount is $" + 0.50 * totalAmt);
+    //         } else if (luckyNumber === 5){
+    //             return ("Jackpot! You chose lucky number 5. Your total after discount is $" + 0 * totalAmt);
+    //         }
+    //         console.log(myResult);
+    //         return myResult;
+    // }
+    //     alert(calculateTotal(luckyNumber, price));
+
+    /**
+     * TODO:
+     * Uncomment the line below to generate a random number between 0 and 5.
+     * (In this line of code, 0 is inclusive, and 6 is exclusive)
+     * Prompt the user for their total bill, then use your `calculateTotal` function
+     * and alerts to display to the user what their lucky number was, what their
+     * price before the discount was, and what their price after the discount is.
+     */
+    // Generate a random number between 0 and 6
     var luckyNumber = Math.floor(Math.random() * 6);
-    var price = prompt("Enter the price of your items ");
+
+    var price = prompt("Enter the total of your bill ");
 
         function calculateTotal(luckyNumber, totalAmt){
         var myResult = luckyNumber;
 
             if (luckyNumber === 0){
-                return("Sorry! You did not choose a lucky number. Your total is $" + 1 * totalAmt);
+                return("Sorry! You did not choose a lucky number. Your bill is $" + 1 * totalAmt + ".");
             } else if (luckyNumber === 1){
-                return ("Woohoo! You chose lucky number 1. Your total after discount is $" + 0.90 * totalAmt);
+                return ("Woohoo! You chose lucky number 1. Before the discount was applied, your bill was $" + totalAmt + ". Your total after discount is $" + 0.90 * totalAmt + ".");
             } else if (luckyNumber === 2){
-                return ("Woohoo! You chose lucky number 2. Your total after discount is $" + 0.75 * totalAmt);
+                return ("Woohoo! You chose lucky number 2. Before the discount was applied, your bill was $" + totalAmt + ". Your total after discount is $" + 0.75 * totalAmt + ".");
             } else if (luckyNumber === 3){
-                return ("Woohoo! You chose lucky number 3. Your total after discount is $" + 0.65 * totalAmt);
+                return ("Woohoo! You chose lucky number 3. Before the discount was applied, your bill was $" + totalAmt + ". Your total after discount is $" + 0.65 * totalAmt + ".");
             } else if (luckyNumber === 4){
-                return ("Woohoo! You chose lucky number 4. Your total after discount is $" + 0.50 * totalAmt);
+                return ("Woohoo! You chose lucky number 4. Before the discount was applied, your bill was $" + totalAmt + ". Your total after discount is $" + 0.50 * totalAmt + ".");
             } else if (luckyNumber === 5){
-                return ("Jackpot! You chose lucky number 5. Your total after discount it $" + 0 * totalAmt);
+                return ("Jackpot! You chose lucky number 5. Before the discount was applied, your bill was $" + totalAmt + ". Enjoy your meal on us. Come back soon!");
             }
             console.log(myResult);
             return myResult;
     }
         alert(calculateTotal(luckyNumber, price));
 
-    // var numbers = [1, 2, 3, 4, 5];
-    // var randomNumbers = numbers[Math.floor(Math.random() * numbers.length)];
-    //
-    // function calculateTotal(numbers, discPerc) {
-    //     console.log(numbers, 100);
-    //     var result = discPerc * 100;
-    //
-    //     if (randomNumbers === 0) {
-    //         calculateTotal(0, 100);
-    //         alert("Sorry, no discount available today");
-    //         return result;
-    //     } else if (randomNumbers === 1) {
-    //         calculateTotal(0.90, 100);
-    //         alert("10% Discount applied! Your total is: " + calculateTotal);
-    //         return result;
-    //     } else if (randomNumbers === 2) {
-    //         calculateTotal(0.75, 100);
-    //         alert("25% Discount applied! Your total is: " )
-    //         return result;
-    //     } else if (randomNumbers === 3) {
-    //         calculateTotal(0.65, 100);
-    //         alert("35% Discount applied!")
-    //         return result;
-    //     } else if (randomNumbers === 4) {
-    //         calculateTotal(0.50, 100);
-    //         alert("50% Discount applied!");
-    //         return result;
-    //     } else if (randomNumbers === 5) {
-    //         calculateTotal(1, 100)
-    //         alert("Woohoo! You picked the lucky number. Enjoy your product on us");
-    //         return result;
-    //     }
-    // }
-    // alert(calculateTotal(numbers));
+
+
 
 
 </script>

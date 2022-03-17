@@ -7,25 +7,25 @@
 <body>
 
 <script>
-    /**
-     * TODO:
-     * Create a function named `analyzeColor` that accepts a string that is a color
-     * name as input. This function should return a message which relates to the
-     * color stated in the argument of the function. For colors you do not have
-     * responses written for, return a string stating so
-     *
-     * Example:
-     *  > analyzeColor('blue') // returns "blue is the color of the sky"
-     *  > analyzeColor('red') // returns "Strawberries are red"
-     *
-     *
-     *  > analyzeColor('cyan') // returns "I don't know anything about cyan"
-     *
-     * You should use an if-else-if-else block to return different messages.
-     *
-     * Test your function by passing various string literals to it and
-     * console.logging the function's return value
-     */
+    // /**
+    //  * TODO:
+    //  * Create a function named `analyzeColor` that accepts a string that is a color
+    //  * name as input. This function should return a message which relates to the
+    //  * color stated in the argument of the function. For colors you do not have
+    //  * responses written for, return a string stating so
+    //  *
+    //  * Example:
+    //  *  > analyzeColor('blue') // returns "blue is the color of the sky"
+    //  *  > analyzeColor('red') // returns "Strawberries are red"
+    //  *
+    //  *
+    //  *  > analyzeColor('cyan') // returns "I don't know anything about cyan"
+    //  *
+    //  * You should use an if-else-if-else block to return different messages.
+    //  *
+    //  * Test your function by passing various string literals to it and
+    //  * console.logging the function's return value
+    //  */
 
     //Create a global variable prompting the user to enter a color.
         //create a function named analyzeColor
@@ -150,6 +150,65 @@
      * Test your function by passing it various values and checking for the expected
      * return value.
      */
+
+    var luckyNumber = Math.floor(Math.random() * 6);
+    var price = prompt("Enter the price ");
+
+        function calculateTotal(luckyNumber, totalAmt){
+        var myResult = luckyNumber;
+
+            if (luckyNumber === 0){
+                return("Sorry! You did not choose a lucky number. Your total is $" + 0 * totalAmt);
+            } else if (luckyNumber === 1){
+                return ("Your total after discount is $" + 0.90 * totalAmt);
+            } else if (luckyNumber === 2){
+                return ("Your total after discount is $" + 0.75 * totalAmt);
+            } else if (luckyNumber === 3){
+                return ("Your total after discount is $" + 0.65 * totalAmt);
+            } else if (luckyNumber === 4){
+                return ("Your total after discount is $" + 0.50 * totalAmt);
+            } else if (luckyNumber === 5){
+                return ("Your total after discount it $" + 1 * totalAmt);
+            }
+            console.log(myResult);
+            return myResult;
+    }
+        alert(calculateTotal(luckyNumber, price));
+
+    // var numbers = [1, 2, 3, 4, 5];
+    // var randomNumbers = numbers[Math.floor(Math.random() * numbers.length)];
+    //
+    // function calculateTotal(numbers, discPerc) {
+    //     console.log(numbers, 100);
+    //     var result = discPerc * 100;
+    //
+    //     if (randomNumbers === 0) {
+    //         calculateTotal(0, 100);
+    //         alert("Sorry, no discount available today");
+    //         return result;
+    //     } else if (randomNumbers === 1) {
+    //         calculateTotal(0.90, 100);
+    //         alert("10% Discount applied! Your total is: " + calculateTotal);
+    //         return result;
+    //     } else if (randomNumbers === 2) {
+    //         calculateTotal(0.75, 100);
+    //         alert("25% Discount applied! Your total is: " )
+    //         return result;
+    //     } else if (randomNumbers === 3) {
+    //         calculateTotal(0.65, 100);
+    //         alert("35% Discount applied!")
+    //         return result;
+    //     } else if (randomNumbers === 4) {
+    //         calculateTotal(0.50, 100);
+    //         alert("50% Discount applied!");
+    //         return result;
+    //     } else if (randomNumbers === 5) {
+    //         calculateTotal(1, 100)
+    //         alert("Woohoo! You picked the lucky number. Enjoy your product on us");
+    //         return result;
+    //     }
+    // }
+    // alert(calculateTotal(numbers));
 
 
 </script>

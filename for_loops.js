@@ -1,51 +1,56 @@
-//Todo: Exercise 2 (complete)
+// //Todo: Exercise 2 (complete)
 
-for (var i = 1; i <= 10; i++) {
-        console.log(7 + " x " + i + " = " + (7*i));
+function showMultiplicationTable(num) {
+    for (var i = 1; i <= 10; i++) {
+        var solution = num * i;
+        console.log(num + " x " + i + " = " + solution);
     }
+}
+showMultiplicationTable(7);
 
-//Todo: exercise 3 (still working)
+// //Todo: exercise 3 (complete)
 
-
-for (var i = 20; i <= 200; i++){
+for (var i = 1; i <= 10; i++){
+    var randomNumber = Math.floor(Math.random() * (200 -20) + 20);
+    console.log(randomNumber);
     if (i % 2 === 0) {
-        console.log(i + " is even");
+        console.log(randomNumber + " is even");
     } else {
-        console.log(i + " is odd")
+        console.log(randomNumber + " is odd")
     }
 }
 
 //Todo: Exercise 4. (Complete)
 
-let n = 9; // height of pattern
-let string = "";
+var n = 9; // height of pattern
+var string = "";
 // External loop
-for (let i = 1; i <= n; i++) {
+for (var i = 1; i <= n; i++) {
     // Internal loop
-    for (let j = 1; j <= i; j++) {
+    for (var j = 1; j <= i; j++) {
         string += i;
     }
     string += "\n";
 }
 console.log(string);
 
-//Todo: Exercise 5 (complete)
+// //Todo: Exercise 5 (complete)
 
 for (var i = 100; i > 0; i -= 5){
     console.log(i);
 }
 
 
-// Todo: warm up exercise -- write a javascript function that accepts the 3 lengths of a triangle and outputs the triangles area
-
-var b = prompt("What is the length of the base of the triangle?");
-var h = prompt("What is the height of the triangle?");
-var formula = ((b *h) / 2)
-function triangleArea(calcArea){
-    return ("The area of the triangle is " + formula);
-}
-
-alert(triangleArea((b * h) / 2));
+// // Todo: warm up exercise -- write a javascript function that accepts the 3 lengths of a triangle and outputs the triangles area
+//
+// var b = prompt("What is the length of the base of the triangle?");
+// var h = prompt("What is the height of the triangle?");
+// var formula = ((b *h) / 2)
+// function triangleArea(calcArea){
+//     return ("The area of the triangle is " + formula);
+// }
+//
+// alert(triangleArea((b * h) / 2));
 
 // var side1 = prompt("What is the length of side 1?");
 // var side2 = prompt("What is the length of side 2?");

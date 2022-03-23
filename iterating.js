@@ -1,32 +1,32 @@
-(function(){
-//     "use strict";
-//
-//     /**
-//      * TODO:
-//      * Create an array of 4 people's names and store it in a variable called
-//      * 'names'.
-//      */
-//
-//     var names = ["Melanie", "Freddie", "Trevor", "Chelsea"];
-//
-//     /**
-//      * TODO:
-//      * Create a log statement that will log the number of elements in the names
-//      * array.
-//      */
-//
-//     console.log(names);
-//
-//     /**
-//      * TODO:
-//      * Create log statements that will print each of the names individually by
-//      * accessing each element's index.
-//      */
-//
-//     console.log(names[0]);
-//     console.log(names[1]);
-//     console.log(names[2]);
-//     console.log(names[3]);
+(function() {
+    "use strict";
+
+    /**
+     * TODO:
+     * Create an array of 4 people's names and store it in a variable called
+     * 'names'.
+     */
+
+    var names = ["Melanie", "Freddie", "Trevor", "Chelsea"];
+
+    /**
+     * TODO:
+     * Create a log statement that will log the number of elements in the names
+     * array.
+     */
+
+    console.log(names);
+
+    /**
+     * TODO:
+     * Create log statements that will print each of the names individually by
+     * accessing each element's index.
+     */
+
+    console.log(names[0]);
+    console.log(names[1]);
+    console.log(names[2]);
+    console.log(names[3]);
 
     /**
      * TODO:
@@ -34,11 +34,11 @@
      * array.
      */
 
-    // var names = ["Melanie", "Freddie", "Trevor", "Chelsea"];
-    //
-    // for (var i = 0; i < names.length; i++) {
-    //     console.log(names[i]);
-    // }
+    var names = ["Melanie", "Freddie", "Trevor", "Chelsea"];
+
+    for (var i = 0; i < names.length; i++) {
+        console.log(names[i]);
+    }
 
 
     /**
@@ -46,11 +46,11 @@
      * Refactor your above code to use a `forEach` loop
      */
 
-    // var names = ["Melanie", "Freddie", "Trevor", "Chelsea"];
-    //
-    // names.forEach(function(siblings){
-    //     console.log(siblings);
-    // })
+    var names = ["Melanie", "Freddie", "Trevor", "Chelsea"];
+
+    names.forEach(function(siblings){
+        console.log(siblings);
+    })
 
 
     /**
@@ -69,10 +69,11 @@
 
     var num = [1, 2, 3, 4, 5];
 
-    num.every(function(first, second, last){
-        console.log(first[0], second[1], last[4]);
+    num.forEach(function(first, second, last){
+        {
+            console.log(first[0], second[1], last[4]);
+
+        }
     })
-
-
 
 })();

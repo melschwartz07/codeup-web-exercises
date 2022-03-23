@@ -51,14 +51,16 @@ for (var i = 100; i > 0; i -= 5){
 // }
 //
 // alert(triangleArea((b * h) / 2));
+//
+// // var side1 = prompt("What is the length of side 1?");
+// // var side2 = prompt("What is the length of side 2?");
+// // var side3 = prompt("What is the length of side 3?");
+// // var formulaS = ((side1 + side2 + side3) / 2);
+// // var formulaA = (Math.sqrt(formulaS(formulaS - side1) * (formulaS - side2) * (formulaS - side3)));
+// // function triangleArea(calcArea){
+// //     return ("The area of the triangle is " + formulaA);
+// // }
+// // alert(triangleArea(formulaA));
 
-// var side1 = prompt("What is the length of side 1?");
-// var side2 = prompt("What is the length of side 2?");
-// var side3 = prompt("What is the length of side 3?");
-// var formulaS = ((side1 + side2 + side3) / 2);
-// var formulaA = (Math.sqrt(formulaS(formulaS - side1) * (formulaS - side2) * (formulaS - side3)));
-// function triangleArea(calcArea){
-//     return ("The area of the triangle is " + formulaA);
-// }
-// alert(triangleArea(formulaA));
+
 

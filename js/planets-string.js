@@ -32,9 +32,9 @@
      * string, and <li> tags around each planet.
      */
 
-    var listPlanets = planetsString.split("|");
-    var ullistPlanets = "<ul>" + "<li>" + listPlanets.join("</li><li>") + "</li>" + "</ul>";
-    console.log(listPlanets);
-    console.log(ullistPlanets);
+    // var listPlanets = planetsString.split("|");
+    // var ullistPlanets = "<ul>" + "<li>" + listPlanets.join("</li><li>") + "</li>" + "</ul>";
+    // console.log(listPlanets);
+    // console.log(ullistPlanets);
 //
 })();

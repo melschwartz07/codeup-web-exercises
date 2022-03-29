@@ -82,40 +82,6 @@
         }
     })
 
-    // console.log("The total amount for Cameron is: " + shoppers[0].amount + ".");
-    // console.log("Ryan gets a discount because he spent " + shoppers[1].amount + ".");
-    // console.log("George gets a discount because he spent " + shoppers[2].amount + ".");
-    // console.log("Here are Ryan's and George's discounted totals: ");
-    // shoppers.forEach(function(spend) {
-    //     shoppers.amount.forEach(function(spend){
-    //         console.log(spend);
-    //     })
-    //
-    //
-    //     });
-
-
-    // var shoppers = [
-    //     {
-    //         name: "Cameron",
-    //         amount: 180,
-    //     },
-    //     {
-    //         name: "Ryan",
-    //         amount: 250,
-    //     },
-    //     {
-    //         name: "George",
-    //         amount: 320,
-    //     }
-    // ];
-
-
-
-
-
-
-
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -129,6 +95,45 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+
+    var books = [
+        {
+            title: "Wuthering Heights",
+            author: {
+                firstName: "Emily",
+                lastName: "Bronte",
+            },
+        },
+        {
+            title: "Rich Dad, Poor Dad",
+            author: {
+                firstName: "Robert",
+                lastName: "Kiyosaki",
+            },
+        },
+        {
+            title: "Animal Farm",
+            author: {
+                firstName: "George",
+                lastName: "Orwell",
+            },
+        },
+        {
+            title: "How to win friends and influence people",
+            author: {
+                firstName: "Dale",
+                lastName: "Carnegie",
+            },
+        },
+        {
+            title: "Outliers",
+            author: {
+                firstName: "Malcolm",
+                lastName: "Gladwell",
+            },
+        },
+    ];
+
 
     /**
      * TODO:
@@ -154,6 +159,15 @@
      *      ---
      *      ...
      */
+
+
+    books.forEach(function(book){
+
+        console.log("Title: " + book.title);
+        console.log("Author: " + book.author.firstName + " " + book.author.lastName);
+    })
+
+
 
     /**
      * Bonus:

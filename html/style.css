@@ -5,7 +5,7 @@ h1 {
 }
 
 body {
-    background-size: 1500px 1500px;
+    background-size: 1500px 1670px;
     background-image: url("pexels-aleksandar-pasaric-325185.jpg")
 }
 
@@ -27,7 +27,6 @@ table {
     table-layout: auto;
     width: 20%;
     border-collapse: collapse;
-    border: 10px lightcoral;
 }
 
 thead th:nth-child(1) {
@@ -48,4 +47,20 @@ thead th:nth-child(4) {
 
 th, td {
     padding: 5px;
+}
+
+a:link {    /* unvisited link */
+    color: #ff0000;
+    text-decoration: none;
+    border-bottom: 1px solid;
+}
+a:visited {    /* visited link */
+    color: #ff00ff;
+}
+a:hover {    /* mouse over link */
+    color: #00ff00;
+    border-bottom: none;
+}
+a:active {    /* active link */
+    color: #00ffff;
 }

@@ -1,0 +1,57 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    background-color: #cbffcd;
+    font-family: Arial, Ubuntu, sans-serif;
+}
+
+form {
+    padding: 1em;/* This form should be separated from other elements by 1em */
+    padding-inline: 1em;/* There must be 1em between the content and the border of this element */
+}
+
+fieldset {
+    -webkit-box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
+    padding-inline: 1em;
+    background: white;
+}
+
+.width-80 {
+    width: 80%;
+    margin: auto;
+}
+
+.form-group {
+    width: 100%;
+    margin-block: 0.5em;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+.btn {
+    padding-block: 8px;
+    color: white;
+    font-weight: bold;
+    border-width: 1px;
+    border-color: gray;
+    background-color: #0fb784;
+}
+
+.form-control {
+    padding-block: 4px;
+    margin-block: 0.5em;
+    width: calc(100% - 4px);
+}

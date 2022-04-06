@@ -1,0 +1,140 @@
+* {box-sizing: border-box;}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: lightskyblue;
+    font-family: Chalkboard, sans-serif;
+}
+
+h1 {text-align: center;}
+
+h2, h3 {
+    text-align: left;
+    padding: 4px;
+    margin: 0;
+}
+
+.container {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.green-box {
+    background: green;
+    height: 1em;
+    width: 2em;
+}
+
+.border {border: 2px solid black;}
+
+.card {
+    width: 400px;
+    height: 800px;
+    background: white;
+    padding: 1em;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    /*make every box inside the content into a row*/
+    /*flex-direction: row;*/
+}
+
+section {
+    display: inherit;
+    flex-direction: row;
+    justify-content: space-around;/* enter needed declarations here */
+}
+
+section:nth-of-type(1) {
+    height: 3em;
+    background: lightgreen;
+    /*give even space to the dark green boxes*/
+    justify-content: space-between;
+    /*center the first three dark green boxes*/
+    align-items: center;
+}
+section:nth-of-type(1) div:last-child {
+    /*align the last green box to be at the top*/
+    align-self: flex-start;
+}
+
+.purple-box {
+    background: fuchsia;
+    width: 3em;
+    height: 1em;
+}
+
+.purple-box:nth-of-type(1) {
+    /*grow the first purple box to be the largest of the three*/
+    flex-grow: 2;
+}
+
+.purple-box:nth-of-type(2) {
+    /*grow the second purple box to be second largest of the three*/
+    flex-grow: 1;
+}
+
+.blue-box {
+    width: 100%;
+    background: blue;
+    height: 10em;
+}
+
+section:nth-of-type(3) {
+    justify-content: flex-end;/* enter needed declarations here */
+}
+
+section:nth-of-type(3) h3 {
+    justify-content: flex-start;/* enter needed declarations here */
+
+}
+
+.orange-circle {
+    background: orange;
+    width: 2em;
+    height: 2em;
+    border-radius: 1em;
+    margin: .5em;
+}
+
+
+.large-brown-box {
+    height: 5em;
+    width: 5em;
+    background: brown;
+    flex-grow: 1;
+    /* enter needed declarations here */
+}
+
+.large-brown-box:nth-of-type(2) {
+    justify-content: space-evenly;
+    margin: 0 1em;
+}
+
+section:nth-of-type(5) {
+    /*space the yellow boxes evenly*/
+    /* enter needed declarations here */
+}
+
+.yellow-box {
+    background: yellow;
+    width: 2em;
+    height: 2em;
+}
+
+section:nth-of-type(6) {
+    background: coral;
+    height: 20em;
+    align-content: center; /* enter needed declarations here */
+}
+
+.grey-box {
+    background: grey;
+    width: 3em;
+    height: 3em;
+}
+
+.grey-box:nth-of-type(odd) {
+    height: 4em;
+}

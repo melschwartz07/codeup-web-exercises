@@ -1,0 +1,6 @@
+/* screen sizes 500px and up */
+@media screen and (min-width: 100px) {
+    selector {
+        property: value;
+    }
+}

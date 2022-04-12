@@ -180,4 +180,14 @@
      *   `showBookInfo` function.
      */
 
+    // books.createBook = function (bookName, authorFirst, authorLast) {
+    //     return books.title = bookName, books.firstName = authorFirst, books.lastName = authorLast;
+    // };
+    // var addBook = books.createBook();
+    //
+    // console.log(books)
+    // console.log(books.length)
+    //
+    // books[addBook]
+
 })();

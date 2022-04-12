@@ -5,81 +5,8 @@
     <title>Title</title>
 </head>
 <body>
-<script>
-
-    //1. Write a function.
-    //2. Name it sayHello
-    //3. Take a parameter called name
-    //4. Return a message that says hello + name.
-    //5. call the function and pass a name
-    function sayHello(name) {
-    return("Hello, " + name + "!");
-    }
-
-    sayHello("Melanie");
-
-    //1. call the function sayHello
-    //2. "Melanie Schwartz"
-    //3. Create a var (helloMessage) and assign it to the result of my function
-
-    var helloMessage = sayHello(sayHello("Melanie Schwartz"));
-
-    //Create var to store string literal
-    //Pass in the var with string literal
-    var myName = "Melanie Schwartz";
-    sayHello(myName);
-
-    var random = Math.floor((Math.random() * 3) + 1);
-
-    //1. create a function isTwo
-    //2. Pass the number as a parameter
-    //3. inside the function return a boolean
-    //4. if num === 2, return true/if num !=== 2, return false
-    //5. call the function and pass in rand var already in the argument
-
-    function isTwo(num){
-        console.log(num);
-        return num ===2;
-    }
-    isTwo(random);
-
-    //1. Write a function called calculateTip
-    //2. Accept 2 params, tipPerc, totalBill
-    //3. return the tip amount in function code
-
-    function calcTip(tipPerc, totalBill){
-        var amtToTip = tipPerc * totalBill;
-        return amtToTip;
-    }
-    calculateTip(0.20, 20);
-    calculateTip(0.50, 45);
-    calculateTip(0.15, 5);
-
-    //calculateTip again but tipPerc and totalBill come from a prompt messsage and amtToTip is an alert
-    //1. prompt user for tipPerc and store in a var
-    //2. convert the tipPerc to a number using (Number())
-    //3. ask the user for bill total - totalBill is the var
-    //4. use the var to turn totalBill into a number.
-    //5. call the function with a result being called in an alert message.
-
-    var perc = prompt("How much would you like to tip?");
-    var tot = prompt("What was the total of the bill?");
-    alert(calculateTip(Number(perc), Number(tot)));
-
-    //1. Create a function - applyDiscount
-    //2. applyDiscount accepts 2 params: pricePerDiscount, discPerc
-    //3. return num
-
-    function applyDiscount(ogPrice, discPrice){
-        var result = ogPrice - (discPerc * ogPrice);
-        return result;
-    }
-    applyDiscount(100, 0.45);
-
-
-</script>
 <script
-    src="../js/js/functions.js">
+    src="../js/functions.js">
 </script>
 
 </body>

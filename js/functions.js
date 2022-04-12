@@ -9,6 +9,12 @@
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
 
+function sayHello(name) {
+    return("Hello, " + name + "!");
+}
+
+sayHello("Melanie");
+
 /**
  * TODO:
  * Call the function 'sayHello' and pass your name as a string literal argument.
@@ -17,12 +23,16 @@
  * console.log 'helloMessage' to check your work
  */
 
+var helloMessage = sayHello(sayHello("Melanie Schwartz"));
+
 /**
  * TODO:
  * Store your name as a string in a variable named 'myName', and pass that
  * variable to the 'sayHello' function. You should see the same output in the
  * console.
  */
+
+var helloMessage = sayHello(sayHello("Melanie Schwartz"));
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
@@ -45,6 +55,13 @@ var random = Math.floor((Math.random() * 3) + 1);
  * different result everytime you refresh the page if you are using the random
  * number)
  */
+var random = Math.floor((Math.random() * 3) + 1);
+
+function isTwo(num){
+    console.log(num);
+    return num ===2;
+}
+isTwo(random);
 
 /**
  * TODO:
@@ -58,12 +75,24 @@ var random = Math.floor((Math.random() * 3) + 1);
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
 
+function calcTip(tipPerc, totalBill){
+    var amtToTip = tipPerc * totalBill;
+    return amtToTip;
+}
+calculateTip(0.20, 20);
+calculateTip(0.50, 45);
+calculateTip(0.15, 5);
+
 /**
  * TODO:
  * Use prompt and alert in combination with your calculateTip function to
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
+
+var perc = prompt("How much would you like to tip?");
+var tot = prompt("What was the total of the bill?");
+alert(calculateTip(Number(perc), Number(tot)));
 
 /**
  * TODO:
@@ -79,3 +108,9 @@ var random = Math.floor((Math.random() * 3) + 1);
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
+
+function applyDiscount(ogPrice, discPrice){
+    var result = ogPrice - (discPerc * ogPrice);
+    return result;
+}
+applyDiscount(100, 0.45);

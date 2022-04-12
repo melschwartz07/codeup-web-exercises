@@ -40,3 +40,8 @@ alert(payDay(googDays, amazonDays, fbDays));
 //A student can be enrolled in a class only if the class is not full
 // and the class schedule does not conflict with her current schedule.
 
+var schedDays = prompt("Enter the class you want to take")
+function student(x){
+    return ("You've successfully enrolled in " + x + "!");
+}
+alert(student(schedDays));

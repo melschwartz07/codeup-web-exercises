@@ -1,0 +1,23 @@
+.jumbotron{
+    position: relative;
+}
+
+.container{
+    width: 100%;
+    position: relative;
+    bottom: 200px;
+    right: 10px;
+    background-color: white;
+    opacity: .8;
+    color: black;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+
+
+
+
+
+

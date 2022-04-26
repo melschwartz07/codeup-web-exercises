@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/coffee-project.css">
+    <img style="background-image: url('../images/coffee-background.jpeg');">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="heading">
+    <h1>Tomahawk Coffee Company</h1>
+</div>
+
+<br>
+
+<h1>Choose Roast</h1>
+<div>
+    <div class="container">
+        <form class="select-container">
+            <label class ="roast-label input-label">Roast</label>
+            <select id="roast-select" class="roast-select">
+                <option value="all">All</option>
+                <option value="light">Light</option>
+                <option value="medium">Medium</option>
+                <option value="dark">Dark</option>
+            </select>
+            <input id="select-roast" type="search" id="search-bar" class="search-bar" placeholder="Search By Name"/>
+            <input id="submit-1" type="submit" class="submit-button" />
+        </form>
+        <br>
+    </div>
+    <div class="heading">
+        <h1>Add Coffee</h1>
+    </div>
+
+    <div class="container">
+        <form class="select-container">
+            <label class ="roast-label input-label">Roast</label>
+            <select id="roastSelect">
+                <option value="light">Light</option>
+                <option value="medium">Medium</option>
+                <option value="dark">Dark</option>
+            </select>
+            <input id="add-coffee" type="search" class="search-bar" placeholder="Enter New Coffee"/>
+            <input id="submit-2" type="submit" class="submit-button" />
+        </form>
+        <br>
+    </div>
+
+    <div id="coffee-list">
+        <div id="coffee-name"></div>
+        <div id="coffee-roast"></div>
+    </div>
+</div>
+
+    <script src="../js/coffee-project.js"></script>
+</body>
+</html>

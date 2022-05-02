@@ -37,7 +37,7 @@
     <br>
 
     <dt>What is the largest national park site? Smallest?</dt>
-    <dd class="invisbile">Largest: Wrangell-St. Elias National Park and Preserve, AK, at 13.2 million acres
+    <dd class="invisible">Largest: Wrangell-St. Elias National Park and Preserve, AK, at 13.2 million acres
         Smallest: Thaddeus Kosciuszko National Memorial, PA, at 0.02 acres</dd>
 
     <br>
@@ -56,6 +56,17 @@
     <dd class="invisible">Fewer than one-third of the national parks charge entrance fees. You can obtain park entrance passes by visiting a park site that charges an entrance fee.</dd>
 </dl>
 
+
+<script src="../js/jQuery/jquery-2.2.4.js"></script>
+<script>
+    $(document).ready(function() {
+
+        $('.invisible').css('visibility', 'hidden')
+
+    });
+
+
+</script>
 
 </body>
 </html>

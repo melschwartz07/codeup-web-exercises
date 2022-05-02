@@ -3,8 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+
+    .faq {
+        visibility: visible;
+    }
+
+    </style>
 </head>
 <body>
+
 <dl>
     <dt>Who is the director of the National Park Service?</dt>
     <dd class="invisible">Charles F. "Chuck" Sams III is the Director of the National Park Service.</dd>
@@ -56,8 +64,10 @@
     <dd class="invisible">Fewer than one-third of the national parks charge entrance fees. You can obtain park entrance passes by visiting a park site that charges an entrance fee.</dd>
 </dl>
 
-<h3>Grand Canyon National Park</h3>
-<ul>
+<button class="answers">See Answers</button>
+
+<h3 class="bold">Grand Canyon National Park</h3>
+<ul class="list">
 
     <li>Most experts tell us that the Grand Canyon is between 5 to 6 million years old, (considered a Young Canyon).</li>
     <li>The Grand Canyon is from 10 to 18 miles wide across in some parts</li>
@@ -65,8 +75,8 @@
     <li> Rainfall in the canyon is 10 to 13 inches annually, but at the bottom less than 10 inches.</li>
 </ul>
 
-<h3>Glacier National Park</h3>
-<ul>
+<h3 class="bold">Glacier National Park</h3>
+<ul class="list">
 
     <li>The park is estimated to be 1 million acres.</li>
     <li>The vision for a park was to celebrate peace and friendship between the United States and Canada.</li>
@@ -74,8 +84,8 @@
     <li>Evidence of human use in the area dates back over 12,000 years.</li>
 </ul>
 
-<h3>Bryce Canyon National Park</h3>
-<ul>
+<h3 class="bold">Bryce Canyon National Park</h3>
+<ul class="list">
 
     <li>Bryce Canyon National Park covers a total area of 35,835 acres</li>
     <li>Bryce Canyon was made a national park on September 15, 1928</li>
@@ -83,18 +93,33 @@
     <li>Bryce Canyon National Park lies in the Mountain time zone</li>
 </ul>
 
-<button>Yellow Background</button>
+<button class="button">Yellow Background</button>
 
 
 <script src="../js/jQuery/jquery-2.2.4.js"></script>
 <script>
-    $(document).ready(function() {
-        $('.invisible').css('visibility', 'hidden')
-        $('.invisible').toggleClass('visible')
+    $(document).ready(function () {
+        "use strict";
+        $('.answers').click(function () {
+            $('dd').toggle('invisible');
+        });
 
+
+
+        $('.bold').click(function () {
+            $('.list').css('font-weight', 'bold')
+        })
+
+        $(".button").click(function () {
+            $(".list").each(function (index, el) {
+                $(el).children().last().css('background-color', 'yellow');
+            });
+        });
+
+        $('.list li').click(function () {
+            $(this).parent().children().first().css("color", "blue");
+        });
     });
-
-
 </script>
 
 </body>

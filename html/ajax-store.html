@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)https://java.codeup.com/examples/javascript/ajax-store.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Online Store</title>
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+</head>
+
+<body class="background mt-3 container">
+<style>
+
+    .background{
+        background: lightgoldenrodyellow;
+    }
+
+
+    #products{
+        margin: auto;
+        width: 75%;
+    }
+
+    #refresh{
+        margin: auto;
+    }
+</style>
+
+
+
+<!--1. Your online tool store should load data from the JSON file using a get request and append the data to the table. You will need to use either $.ajax() or $.get(), and a .done() callback.-->
+<!--2. Add some new entries to inventory.json and see how the data on the page gets updated.-->
+<!--3. Add a "Refresh" button that will load inventory.json for you without having to refresh the entire page.-->
+<!--4. Add Twitter Bootstrap to your online store with some custom CSS to make the style your own.-->
+
+<h1 class="text-center">Groovy Tool Store</h1>
+
+<div class="d-flex justify-content-center mt-4">
+<table class="table-striped table-dark" id="products">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Categories</th>
+        </tr>
+    </thead>
+    <tbody id="insertProducts"></tbody>
+</table>
+</div>
+
+<div class="d-flex justify-content-center mt-4">
+    <button class="btn btn-primary">Refresh</button>
+</div>
+<script src="./ajax-store_files/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+<script>
+(function() {
+    "use strict";
+    // TODO: Create an AJAX GET request for the file under data/inventory.json
+    $(document).ready(function() {
+
+        $.ajax('data/inventory.json')
+            .done(function(data){
+            data.forEach(function(tool){
+                $('#insertProducts').append("<tr>" +
+
+                    "<th>" + tool.title + "</th>" +
+                    "<th>" + tool.quantity + "</th>" +
+                    "<th>" + tool.price + "</th>" +
+                    "<th>" + tool.categories + "</th>" +
+
+                    + "</tr>");
+            });
+            console.log(data);
+        });
+
+        // TODO: Take the data from inventory.json and append it to the products table
+
+        //       HINT: Your data should come back as a JSON object; use console.log() to inspect
+        //             its contents and fields
+        //       HINT: You will want to target #insertProducts for your new HTML elements
+
+        $(function() {
+            $("#button").on("click", function() {
+                $("body").load('#insertProducts');
+                return false;
+            })
+        })
+    });
+})();
+
+
+</script>
+
+
+
+</body></html>

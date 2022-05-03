@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>blog</title>
+
+</head>
+<body>
+
+<div id="posts"></div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+    $(function() {
+
+
+        var listPosts = function () {
+            $.get("data/blog.json").done(function(data) {
+
+                $('#posts').html("");
+                data.forEach(function(post) {
+                    var entry = "";
+                    entry += "<h1 class='title'>" + post.title + "</h1>"
+                    entry += "<p class='content'>" + post.content + "</p>"
+                    entry += "<p class='categories'>" + post.categories + "</p>"
+                    entry += "<p class='date'>" + post.date + "</p>"
+
+                    $('#posts').append(entry);
+
+                });
+
+            });
+        }
+
+        listPosts();
+
+
+        $('#refresh').click(function() {
+            listPosts();
+        })});
+
+
+</script>
+</body>
+</html>

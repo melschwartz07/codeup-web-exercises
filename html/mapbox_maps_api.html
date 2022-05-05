@@ -2,22 +2,91 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-
-    <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet' />
-
+    <title>Mapbox</title>
+    <!-- Mapbox CSS -->
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+    <!-- Custom CSS -->
+    <style>
+        #map {
+            /* the width and height may be set to any size */
+            width: 100%;
+            height: 700px;
+        }
+    </style>
 </head>
 <body>
-<div id='map' style='width: 400px; height: 300px;'></div>
+
+<h1>My First Mapbox Map!</h1>
+
+<!-- The HTML element that serves as the Mapbox container -->
+<div id='map'></div>
+
+<!-- Mapbox JS -->
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+
+<!-- Mapbox Geocoder Util Methods -->
+<script src="mapbox-geocoder-utils.js"></script>
+
+<!-- Custom JS -->
 <script>
+    var apiKey;
     mapboxgl.accessToken = 'pk.eyJ1IjoibWVsYW5pZXNjaHdhcnR6MDciLCJhIjoiY2wycWs3eG5kMDFrZjNqbnRodWVkZzRkaCJ9.X62-Pg5FjXmXZVZfVUaEPQ';
+    apiKey = mapboxgl.accessToken;
     const map = new mapboxgl.Map({
-        container: 'map', // container ID
-        style: 'mapbox://styles/mapbox/streets-v11', // style URL
-        center: [-74.5, 40], // starting position [lng, lat]
-        zoom: 9 // starting zoom
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v9',
+        zoom: 10,
+        center: [-98.4916, 29.4252]
     });
+
+
+    var myRes = [
+        {
+            name: 'Elsewhere Garden Bar and Kitchen',
+            address: '103 E Jones Ave San Antonio, TX  78215 United States',
+            coordinates: {
+                lng: -98.406,
+                lat: 29.436
+            },
+            img: "images/elsewheresatx.jpeg"
+        },
+        {
+            name: 'Nama Ramen',
+            address: '6565 Babcock Rd, San Antonio, TX 78249, USA',
+            coordinates: {
+                lng: -98.615465,
+                lat: 29.553333
+            },
+            img: "images/namaramen.jpeg"
+        },
+        {
+            name: 'Lupe Tortilla',
+            address: '5838 Worth Pkwy San Antonio, TX 78257 United States',
+            coordinates: {
+                lng: -98.599867,
+                lat: 29.612479
+            },
+            img: "images/lupe.jpeg"
+        }]
+    // the  geocode method from mapbox-geocoder-utils.js
+    geocode(myRes[1].address, apiKey).then(function(result) {
+        console.log(apiKey);
+        map.setCenter(result);
+    })
+
+    myRes.forEach(function(loc){
+      console.log(loc.coordinates)
+
+      let locations = new mapboxgl.Marker()
+      .setLngLat(loc.coordinates)
+      .addTo(map);
+
+      var favPopup = new mapboxgl.Popup()
+        setLngLat(loc.coordinates)
+
+        locations.setPopup(favPopup)
+    });
+
 </script>
 </body>
 </html>

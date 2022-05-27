@@ -5,14 +5,14 @@
 //  Reference the github api documentation to achieve this.
 
 const lastPush = (user) => {
-    fetch('https://api.github.com/' + user + "/events", {headers: {'Authorization': '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'}})
+    fetch('https://api.github.com' , {headers: {'Authorization': 'token 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'}})
         .then(res =>  res.json())
         .then(data => {
             console.log(data);
             document.getElementById('userPush').innerHTML = user;
             document.getElementById('user').innerHTML = `<li>User: Melanie Schwartz</li>`;
             document.getElementById('user').innerHTML += `<li>Username: melschwartz07</li>`;
-            document.getElementById('user').innerHTML += `<li>Repo URL: ${data}</li>`;
+
 
 });
     };
